@@ -84,17 +84,5 @@
 
         }
 
-        //private void DiscoverDbSets()
-        //{
-        //    Assembly assembly = Assembly.GetAssembly(typeof(Player));
-        //    Type[] entities = assembly.GetTypes();
-
-        //    Type DbContext this.GetType();
-        //    foreach (Type entity in entities)
-        //    {
-        //        object dbSet = typeof(DbSet<>)
-        //            .MakeGenericType(entity);
-        //    }
-        //}
     }
 }
