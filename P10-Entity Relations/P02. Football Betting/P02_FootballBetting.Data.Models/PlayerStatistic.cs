@@ -17,7 +17,6 @@
         public virtual Player Player { get; set; } = null!;
 
 
-        //possible judge problem with byte
         public byte ScoredGoals { get; set; }
 
         public byte Assists { get; set; }
