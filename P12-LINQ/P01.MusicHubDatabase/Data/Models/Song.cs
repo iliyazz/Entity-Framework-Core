@@ -29,7 +29,7 @@ public class Song
     public DateTime CreatedOn { get; set; }//required by default
 
 
-    public Genre Genre { get; set; }//required by default , защото енумерацията е репрезентация на int
+    public Genre Genre { get; set; }//required by default , because enumeration is int
 
 
     [ForeignKey(nameof(Album))]
