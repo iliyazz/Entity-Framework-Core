@@ -1,0 +1,53 @@
+﻿namespace P02_FootballBetting.Data.Models
+{
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+    using Common;
+
+
+    public class Player
+    {
+        public Player()
+        {
+            this.PlayersStatistics = new HashSet<PlayerStatistic>();
+        }
+
+
+
+        [Key]
+        public int PlayerId { get; set; }
+
+        [Required]
+        [MaxLength(ValidationConstants.PlayerNameMaxLength)]
+        public string Name { get; set; } = null!;
+
+        //Required by default
+        public int SquadNumber { get; set; }
+
+
+        //This FK can be null
+        //possible problem in judge
+
+
+        [ForeignKey(nameof(Team))]
+        public int TeamId { get; set; }
+
+        public virtual Team Team { get; set; } = null!;
+
+
+
+
+        [ForeignKey(nameof(Position))]
+        public int PositionId { get; set; }
+        public virtual Position Position { get; set; } = null!;
+
+
+        //SQL bit
+        //by default bool is not null- required
+        public bool IsInjured { get; set; }
+
+
+        public virtual ICollection<PlayerStatistic> PlayersStatistics { get; set; }
+
+    }
+}
