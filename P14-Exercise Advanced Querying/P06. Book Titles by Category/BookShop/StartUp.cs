@@ -20,10 +20,6 @@ public class StartUp
     //Problem 06
     public static string GetBooksByCategory(BookShopContext context, string input)
     {
-		//Regex does not work in Judge
-        //Regex regex = new Regex(@"\s+");
-        //string inputWithoutSpaces = regex.Replace(input, " ");
-        //string[] inputArr = inputWithoutSpaces.Split(' ', StringSplitOptions.RemoveEmptyEntries);
         var inputArr = input.ToLower().Split(new [] { ' ', '\t', '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
 
         var output = context.Books
