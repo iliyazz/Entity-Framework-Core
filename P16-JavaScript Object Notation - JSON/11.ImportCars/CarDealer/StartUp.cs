@@ -65,43 +65,6 @@
         }
 
 
-        //public static string ImportCars(CarDealerContext context, string inputJson)
-        //{
-
-        //    var carsParts = JsonConvert.DeserializeObject<List<ImportCarDto>>(inputJson);
-        //    ICollection<Car> validCars = new HashSet<Car>();
-
-        //    ICollection<PartCar> validParts = new HashSet<PartCar>();
-
-        //    foreach (var dto in carsParts)
-        //    {
-        //        Car car = new Car()
-        //        {
-        //            Make = dto.Make,
-        //            Model = dto.Model,
-        //            TravelledDistance = dto.TravelledDistance
-        //        };
-        //        validCars.Add(car);
-
-        //        foreach (var partId in dto.PartsId.Distinct())
-        //        {
-        //            PartCar partCar = new PartCar()
-        //            {
-        //                Car = car,
-        //                PartId = partId
-        //            };
-        //            validParts.Add(partCar);
-        //        }
-
-        //    }
-
-        //    context.Cars.AddRange(validCars);
-        //    context.PartsCars.AddRange(validParts);
-        //    context.SaveChanges();
-        //    return $"Successfully imported {validCars.Count}.";
-        //}
-
-
         //10
             public static string ImportParts(CarDealerContext context, string inputJson)
             {
