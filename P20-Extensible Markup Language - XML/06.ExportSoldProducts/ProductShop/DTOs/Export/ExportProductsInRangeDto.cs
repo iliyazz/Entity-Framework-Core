@@ -16,11 +16,7 @@
         [XmlElement("buyer")]
         public string? Fullname { get; set; }
 
-        //[XmlElement("price")]
-        //public string FirstName { get; set; } = null!;
 
-        //[XmlElement("price")]
-        //public string LastName { get; set; } = null!;
 
     }
 }
